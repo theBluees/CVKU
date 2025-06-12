@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>ArriWae-MyCv</title>
+    <!-- Add these favicon links below -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/A2-removebg-preview.png">
+  
+    <!-- Existing links -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="bg-gradient-to-b from-indigo-50 to-white min-h-screen flex flex-col"
+  >
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <nav
+        aria-label="Primary Navigation"
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a
+          class="text-indigo-600 text-2xl font-bold tracking-wide select-none"
+          href="#"
+          >ArriWae</a
+        >
+        <!-- Desktop Menu -->
+        <ul
+          class="hidden md:flex space-x-8 text-gray-700 font-medium items-center"
+          id="desktop-menu"
+        >
+          <li>
+            <a
+              class="hover:text-indigo-600 transition focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded"
+              href="#about-me"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:text-indigo-600 transition focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded"
+              href="#certificate"
+              >Certificate</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:text-indigo-600 transition focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded"
+              href="#journey"
+              >My Projects</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:text-indigo-600 transition focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded"
+              href="#skills"
+              >Skills &amp; Tools</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:text-indigo-600 transition focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded"
+              href="#soft-skills"
+              >Soft Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="./cv/Ari_Purnomo_CV.pdf"
+              download="Ari_Purnomo_CV"
+              class="inline-flex items-center px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow-md transition focus:outline-none focus:ring-2 focus:ring-indigo-600"
+              aria-label="Download CV"
+              onclick="handleDownload(event)"
+            >
+              <i class="fas fa-download mr-2"></i> Download CV
+            </a>
+          </li>
+        </ul>
+        <button
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          aria-label="Toggle menu"
+          class="md:hidden focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded"
+          id="menu-btn"
+        >
+          <i class="fas fa-bars text-2xl text-indigo-600"></i>
+        </button>
+      </nav>
+      <!-- Mobile Menu -->
+      <div
+        aria-label="Mobile Navigation"
+        class="hidden md:hidden bg-white shadow-md"
+        id="mobile-menu"
+        role="menu"
+      >
+        <ul class="flex flex-col space-y-4 px-6 py-4 text-gray-700 font-medium">
+          <li>
+            <a
+              class="hover:text-indigo-600 transition block focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded"
+              href="#about-me"
+              >About Me</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:text-indigo-600 transition block focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded"
+              href="#certificate"
+              >Certificate</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:text-indigo-600 transition block focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded"
+              href="#journey"
+              >My Projects</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:text-indigo-600 transition block focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded"
+              href="#skills"
+              >Skills &amp; Tools</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:text-indigo-600 transition block focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded"
+              href="#soft-skills"
+              >Soft Skills</a
+            >
+          </li>
+          <li>
+            <a
+  href="./cv/Ari_Purnomo_CV.pdf"
+  download="Ari_Purnomo_CV"
+  class="inline-flex items-center px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow-md transition focus:outline-none focus:ring-2 focus:ring-indigo-600"
+  aria-label="Download CV"
+  onclick="handleDownload(event)"
+>
+  <i class="fas fa-download mr-2"></i> Download CV
+</a>
+
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main class="flex-grow container mx-auto px-6 py-12">
+      <section
+        class="max-w-5xl mx-auto bg-white rounded-3xl shadow-lg p-8 md:p-16 flex flex-col md:flex-row items-center md:items-start gap-12"
+        id="about-me"
+      >
+        <div
+          class="flex-shrink-0 w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-8 border-indigo-300 shadow-lg"
+        >
+          <img
+            alt="my photo"
+            class="w-full h-full object-cover"
+            height="256"
+            src="images/ft2.jpg"
+            width="256"
+          />
+        </div>
+        <div class="flex flex-col flex-grow">
+          <h1 class="text-4xl font-extrabold text-indigo-700 mb-4 typewriter" id="typing-text">
+  Hi, I'm Ari Purnomo
+</h1>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+            I’m a passionate front-end web developer who enjoys learning new
+            things, especially when it comes to designing attractive,
+            responsive, and user-friendly interfaces. Although I’m still in the
+            learning process, I continue to sharpen my skills in HTML, CSS,
+            JavaScript, and modern frameworks to create seamless user
+            experiences on the web.
+          </p>
+          <div class="flex flex-wrap gap-6 mb-8">
+            <div class="flex items-center space-x-3">
+              <i class="fas fa-code text-indigo-600 text-2xl"> </i>
+              <span class="text-gray-800 font-semibold">
+                front-end Development
+              </span>
+            </div>
+
+            <div class="flex items-center space-x-3">
+              <i class="fas fa-mobile-alt text-indigo-600 text-2xl"> </i>
+              <span class="text-gray-800 font-semibold">
+                Responsive Design
+              </span>
+            </div>
+          </div>
+          <div class="flex space-x-6 mb-8">
+            <a
+              aria-label="GitHub"
+              class="text-gray-600 hover:text-indigo-600 transition text-3xl"
+              href="https://github.com/theBluees"
+              rel="noopener"
+              target="_blank"
+            >
+              <i class="fab fa-github"> </i>
+            </a>
+            <a
+              aria-label="LinkedIn"
+              class="text-gray-600 hover:text-indigo-600 transition text-3xl"
+              href="https://www.linkedin.com/in/ari-purnomo"
+              rel="noopener"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin"> </i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="max-w-5xl mx-auto mt-16 bg-white rounded-3xl shadow-lg p-8 md:p-16 fade-in"
+        id="certificate"
+        style="animation-delay: 0.3s"
+      >
+        <h2
+          class="text-3xl font-extrabold text-indigo-700 mb-8 text-center tracking-wide drop-shadow-md"
+        >
+          Certificates
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+          <div
+            class="bg-indigo-50 rounded-xl shadow-md overflow-hidden card-hover transform transition-transform duration-300"
+          >
+            <img
+              alt="id"
+              class="w-full h-48 object-cover"
+              height="400"
+              src="images/ID.png"
+              width="600"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-indigo-700 mb-2">
+                Internet Introduction
+              </h3>
+              <p class="text-gray-700 mb-1">
+                This certificate verifies the completion of the Internet
+                Introduction course.
+                <span class="full-description hidden"
+                  >The course provides a foundational understanding of how the
+                  internet works, including basic concepts such as web browsers,
+                  search engines, websites, and internet safety. It is designed
+                  to help beginners gain confidence in using the internet
+                  effectively and responsibly.</span
+                >
+                <button
+                  class="text-indigo-600 hover:text-indigo-800 font-medium read-more-btn"
+                >
+                  Read More
+                </button>
+                <button
+                  class="text-indigo-600 hover:text-indigo-800 font-medium read-less-btn hidden"
+                >
+                  Show Less
+                </button>
+              </p>
+              <p class="text-gray-600 text-sm">by MySkill</p>
+            </div>
+          </div>
+          <div
+            class="bg-indigo-50 rounded-xl shadow-md overflow-hidden card-hover transform transition-transform duration-300"
+          >
+            <img
+              alt="fo"
+              class="w-full h-48 object-cover"
+              height="400"
+              src="images/FO.png"
+              width="600"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-indigo-700 mb-2">
+                front-end Web Development Introduction
+              </h3>
+              <p class="text-gray-700 mb-1">
+                This certificate verifies the completion of the Front-End
+                Development Introduction course.
+                <span class="full-description hidden">
+                  The course introduces the core concepts of front-end
+                  development, including HTML, CSS, and JavaScript. It covers
+                  how to build responsive websites, understand user interfaces,
+                  and apply design principles. Perfect for beginners aiming to
+                  start a career in web development or enhance their tech
+                  skills.
+                </span>
+                <button
+                  class="text-indigo-600 hover:text-indigo-800 font-medium read-more-btn"
+                >
+                  Read More
+                </button>
+                <button
+                  class="text-indigo-600 hover:text-indigo-800 font-medium read-less-btn hidden"
+                >
+                  Show Less
+                </button>
+              </p>
+
+              <p class="text-gray-600 text-sm">by MySkill</p>
+            </div>
+          </div>
+          <div
+            class="bg-indigo-50 rounded-xl shadow-md overflow-hidden card-hover transform transition-transform duration-300"
+          >
+            <img
+              alt="rwd"
+              class="w-full h-48 object-cover"
+              height="400"
+              src="images/RWD.png"
+              width="600"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-indigo-700 mb-2">
+                Responsive Web Design
+              </h3>
+              <p class="text-gray-700 mb-1">
+                This certificate verifies the completion of the Responsive Web
+                Design course.
+                <span class="full-description hidden">
+                  The course provides a foundational understanding of responsive
+                  web design, including mobile-first principles, flexible grid
+                  systems, and media queries. It is designed to help beginners
+                  build websites that adapt smoothly to various screen sizes and
+                  deliver a consistent user experience across all devices.
+                </span>
+                <button
+                  class="text-indigo-600 hover:text-indigo-800 font-medium read-more-btn"
+                >
+                  Read More
+                </button>
+                <button
+                  class="text-indigo-600 hover:text-indigo-800 font-medium read-less-btn hidden"
+                >
+                  Show Less
+                </button>
+              </p>
+
+              <p class="text-gray-600 text-sm">by MySkill</p>
+            </div>
+          </div>
+          <div
+            class="bg-indigo-50 rounded-xl shadow-md overflow-hidden card-hover transform transition-transform duration-300"
+          >
+            <img
+              alt="api"
+              class="w-full h-48 object-cover"
+              height="400"
+              src="images/API.png"
+              width="600"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-indigo-700 mb-2">
+                API Introduction
+              </h3>
+              <p class="text-gray-700 mb-1">
+                This certificate verifies the completion of the API Introduction
+                course.
+                <span class="full-description hidden">
+                  The course provides a foundational understanding of
+                  Application Programming Interfaces (APIs), including how they
+                  work, how to send and receive data, and how to connect web
+                  applications to external services. It is designed to help
+                  beginners interact with RESTful APIs and build dynamic,
+                  data-driven applications.
+                </span>
+                <button
+                  class="text-indigo-600 hover:text-indigo-800 font-medium read-more-btn"
+                >
+                  Read More
+                </button>
+                <button
+                  class="text-indigo-600 hover:text-indigo-800 font-medium read-less-btn hidden"
+                >
+                  Show Less
+                </button>
+              </p>
+
+              <p class="text-gray-600 text-sm">by MySkill</p>
+            </div>
+          </div>
+          <div
+            class="bg-indigo-50 rounded-xl shadow-md overflow-hidden card-hover transform transition-transform duration-300"
+          >
+            <img
+              alt="sk"
+              class="w-full h-48 object-cover"
+              height="400"
+              src="images/sk.jpg"
+              width="600"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-indigo-700 mb-2">
+                Internship Program – BP3KP Jawa III Yogyakarta
+              </h3>
+              <p class="text-gray-700 mb-1">
+                This certificate verifies the completion of the internship
+                program at BP3KP Jawa III Yogyakarta.
+                <span class="full-description hidden">
+                  The internship program provided practical experience in a
+                  professional government office environment, focusing on
+                  administrative tasks, digital documentation, and public
+                  service procedures. It is designed to enhance students’ work
+                  discipline, communication skills, and understanding of
+                  organizational workflow in the public sector.
+                </span>
+                <button
+                  class="text-indigo-600 hover:text-indigo-800 font-medium read-more-btn"
+                >
+                  Read More
+                </button>
+                <button
+                  class="text-indigo-600 hover:text-indigo-800 font-medium read-less-btn hidden"
+                >
+                  Show Less
+                </button>
+              </p>
+
+              <p class="text-gray-600 text-sm">BP3KP Jawa III Yogyakarta</p>
+            </div>
+          </div>
+          
+          </div>
+        </div>
+      </section>
+      <section
+        class="max-w-5xl mx-auto mt-16 bg-white rounded-3xl shadow-lg p-8 md:p-16 fade-in"
+        id="journey"
+        style="animation-delay: 0.5s"
+      >
+        <h2
+          class="text-3xl font-extrabold text-indigo-700 mb-8 text-center tracking-wide drop-shadow-md"
+        >
+          My Projects
+        </h2>
+        <div class="space-y-12">
+          <div
+            class="flex flex-col md:flex-row md:items-center md:space-x-12 card-hover transform transition-transform duration-300 rounded-xl p-4"
+          >
+            <div
+              class="flex-shrink-0 w-full md:w-64 h-40 rounded-xl overflow-hidden shadow-md mb-6 md:mb-0"
+            >
+              <img
+                alt="krs"
+                class="w-full h-full object-cover"
+                height="160"
+                src="images/krs.png"
+                width="256"
+              />
+            </div>
+            <div>
+             <a href="https://krsjawa3.com/" target="_blank" rel="noopener noreferrer">
+  <h3 class="text-2xl font-semibold text-indigo-600 mb-2 hover:underline cursor-pointer">
+    Participated in Web Development for KRS Jawa III
+  </h3>
+</a>
+<p class="text-gray-700 leading-relaxed">
+  I took part in the development process of the KRS (Klinik Rumah Swadaya) web application 
+  for BP3KP Jawa III Yogyakarta, contributing to its design, structure, and functionality. 
+  This experience improved my skills in teamwork, front-end development, and practical implementation of academic systems.
+</p>
+
+
+            </div>
+          </div>
+          <div
+            class="flex flex-col md:flex-row md:items-center md:space-x-12 md:flex-row-reverse card-hover transform transition-transform duration-300 rounded-xl p-4"
+          >
+            <div
+              class="flex-shrink-0 w-full md:w-64 h-40 rounded-xl overflow-hidden shadow-md mb-6 md:mb-0"
+            >
+              <img
+                alt="WRG"
+                class="w-full h-full object-cover"
+                height="160"
+                src="images/SRC.png"
+                width="256"
+              />
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold text-indigo-600 mb-2">
+  Built an Online Shop Web for Local Store
+</h3>
+<p class="text-gray-700 leading-relaxed">
+  Created a web-based application for a local warung to support online shopping activities. 
+  The platform allows customers to browse products, place orders, and manage transactions easily. 
+  This project helped me strengthen my understanding of front-end development and user-friendly interface design.
+</p>
+
+            </div>
+          </div>
+          <div
+            class="flex flex-col md:flex-row md:items-center md:space-x-12 card-hover transform transition-transform duration-300 rounded-xl p-4"
+          >
+            <div
+              class="flex-shrink-0 w-full md:w-64 h-40 rounded-xl overflow-hidden shadow-md mb-6 md:mb-0"
+            >
+              <img
+                alt="umkla"
+                class="w-full h-full object-cover"
+                height="160"
+                src="images/umkla.png"
+                width="256"
+              />
+            </div>
+            <div>
+              <a href="https://myumkla-pwm3.glitch.me" target="_blank" rel="noopener noreferrer">
+  <h3 class="text-2xl font-semibold text-indigo-600 mb-2 hover:underline cursor-pointer">
+    Developed a Tourism Website for Umbul in Klaten
+  </h3>
+</a>
+<p class="text-gray-700 leading-relaxed">
+  I created a web-based tourism platform highlighting the natural attractions of Umbul in Klaten. 
+  The site showcases destinations, photos, visitor information, and maps to help travelers explore the area. 
+  This project strengthened my skills in web content structuring, layout design, and promoting local tourism through technology.
+</p>
+
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="max-w-5xl mx-auto mt-16 bg-white rounded-3xl shadow-lg p-8 md:p-16 fade-in"
+        id="skills"
+        style="animation-delay: 0.7s"
+      >
+        <h2
+          class="text-3xl font-extrabold text-indigo-700 mb-8 text-center tracking-wide drop-shadow-md"
+        >
+          Skills &amp; Tools
+        </h2>
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 text-center"
+        >
+          <div
+            class="flex flex-col items-center space-y-3 card-hover transform transition-transform duration-300 rounded-xl p-4"
+          >
+            <img
+              alt="HTML"
+              class="w-16 h-16"
+              height="64"
+              src="images/html.png"
+              width="64"
+            />
+            <span class="font-semibold text-gray-700">HTML</span>
+          </div>
+          <div
+            class="flex flex-col items-center space-y-3 card-hover transform transition-transform duration-300 rounded-xl p-4"
+          >
+            <img
+              alt="CSS3"
+              class="w-16 h-16"
+              height="64"
+              src="images/css.png"
+              width="64"
+            />
+            <span class="font-semibold text-gray-700">CSS</span>
+          </div>
+          <div
+            class="flex flex-col items-center space-y-3 card-hover transform transition-transform duration-300 rounded-xl p-4"
+          >
+            <img
+              alt="JavaScript"
+              class="w-16 h-16"
+              height="64"
+              src="images/js.png"
+              width="64"
+            />
+            <span class="font-semibold text-gray-700">JavaScript</span>
+          </div>
+          <div
+            class="flex flex-col items-center space-y-3 card-hover transform transition-transform duration-300 rounded-xl p-4"
+          >
+            <img
+              alt="tailwindcss"
+              class="w-16 h-16"
+              height="64"
+              src="images/tw.png"
+              width="64"
+            />
+            <span class="font-semibold text-gray-700">tailwindcss</span>
+          </div>
+          <div
+            class="flex flex-col items-center space-y-3 card-hover transform transition-transform duration-300 rounded-xl p-4"
+          >
+            <img
+              alt="boostrap"
+              class="w-16 h-16"
+              height="64"
+              src="images/bs.png"
+              width="64"
+            />
+            <span class="font-semibold text-gray-700">Boostrap</span>
+          </div>
+          <div
+            class="flex flex-col items-center space-y-3 card-hover transform transition-transform duration-300 rounded-xl p-4"
+          >
+            <img
+              alt="php"
+              class="w-16 h-16"
+              height="64"
+              src="images/php.png"
+              width="64"
+            />
+            <span class="font-semibold text-gray-700">PhP</span>
+          </div>
+        </div>
+      </section>
+      <section
+        class="max-w-5xl mx-auto mt-16 bg-white rounded-3xl shadow-lg p-8 md:p-16 fade-in"
+        id="soft-skills"
+        style="animation-delay: 0.8s"
+      >
+        <h2
+          class="text-3xl font-extrabold text-indigo-700 mb-8 text-center tracking-wide drop-shadow-md"
+        >
+          Soft Skills
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div class="bg-indigo-50 rounded-xl p-6 card-hover transform transition-transform duration-300">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-users text-2xl text-indigo-600 mr-3"></i>
+              <h3 class="text-xl font-semibold text-indigo-700">Teamwork</h3>
+            </div>
+            <p class="text-gray-700">
+              Strong ability to collaborate effectively in team environments and contribute to collective goals
+            </p>
+          </div>
+
+          <div class="bg-indigo-50 rounded-xl p-6 card-hover transform transition-transform duration-300">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-comments text-2xl text-indigo-600 mr-3"></i>
+              <h3 class="text-xl font-semibold text-indigo-700">Communication</h3>
+            </div>
+            <p class="text-gray-700">
+              Clear and effective communication skills in both written and verbal forms
+            </p>
+          </div>
+
+          <div class="bg-indigo-50 rounded-xl p-6 card-hover transform transition-transform duration-300">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-lightbulb text-2xl text-indigo-600 mr-3"></i>
+              <h3 class="text-xl font-semibold text-indigo-700">Problem Solving</h3>
+            </div>
+            <p class="text-gray-700">
+              Analytical thinking and creative approach to solving technical challenges
+            </p>
+          </div>
+
+          <div class="bg-indigo-50 rounded-xl p-6 card-hover transform transition-transform duration-300">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-clock text-2xl text-indigo-600 mr-3"></i>
+              <h3 class="text-xl font-semibold text-indigo-700">Time Management</h3>
+            </div>
+            <p class="text-gray-700">
+              Efficient organization and prioritization of tasks to meet deadlines
+            </p>
+          </div>
+
+          <div class="bg-indigo-50 rounded-xl p-6 card-hover transform transition-transform duration-300">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-book text-2xl text-indigo-600 mr-3"></i>
+              <h3 class="text-xl font-semibold text-indigo-700">Quick Learning</h3>
+            </div>
+            <p class="text-gray-700">
+              Rapidly adapt to new technologies and development methodologies
+            </p>
+          </div>
+
+          <div class="bg-indigo-50 rounded-xl p-6 card-hover transform transition-transform duration-300">
+            <div class="flex items-center mb-4">
+              <i class="fas fa-tasks text-2xl text-indigo-600 mr-3"></i>
+              <h3 class="text-xl font-semibold text-indigo-700">Adaptability</h3>
+            </div>
+            <p class="text-gray-700">
+              Flexible approach to changing requirements and work environments
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-indigo-700 text-indigo-100 py-8 mt-16">
+      <div class="container mx-auto px-6 text-center">
+        <p class="text-sm select-none">
+          © 2025 ArriWae. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
